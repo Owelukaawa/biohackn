@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn the science behind cold therapy, how it supports recovery, and when it may be useful in a performance or wellness routine.">
+    <title>Cold Therapy: Recovery Science Explained | Biohackn</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #edf4fb;
+            color: #10283b;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .article-page {
+            background: #edf4fb;
+        }
+
+        .container {
+            width: min(1100px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(237, 244, 251, 0.96);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(16, 40, 59, 0.08);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 74px;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            font-size: 1.8rem;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 42px;
+            height: 42px;
+            border: 1px solid rgba(16, 40, 59, 0.12);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.35);
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: #10283b;
+            margin: 0 auto;
+            border-radius: 999px;
+        }
+
+        .logo-img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu a {
+            font-size: 0.9rem;
+            color: #10283b;
+            transition: color 0.2s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #1d4d73;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #10283b, #1b4670);
+            color: #fff !important;
+            padding: 12px 18px;
+            border-radius: 999px;
+        }
+
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(7, 18, 28, 0.78), rgba(7, 18, 28, 0.32)),
+                url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            color: white;
+            padding: 110px 0 80px;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #9fe1ff;
+            margin-bottom: 18px;
+        }
+
+        .blog-hero h1 {
+            font-size: clamp(2.6rem, 5vw, 5rem);
+            line-height: 0.96;
+            letter-spacing: -0.06em;
+            max-width: 760px;
+            margin-bottom: 18px;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.82);
+            margin-bottom: 22px;
+        }
+
+        .hero-intro {
+            max-width: 660px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.86);
+        }
+
+        .article-shell {
+            padding: 60px 0 80px;
+        }
+
+        .article-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(240px, 0.8fr);
+            gap: 48px;
+            align-items: start;
+        }
+
+        .article-body {
+            background: rgba(255, 255, 255, 0.42);
+            border: 1px solid rgba(16, 40, 59, 0.08);
+            padding: clamp(24px, 4vw, 42px);
+            box-shadow: 0 18px 45px rgba(16, 40, 59, 0.04);
+        }
+
+        .article-body p,
+        .article-body li {
+            color: #34516c;
+            line-height: 1.85;
+            font-size: 1.05rem;
+        }
+
+        .article-body p + p {
+            margin-top: 22px;
+        }
+
+        .article-body h2 {
+            margin-top: 40px;
+            margin-bottom: 18px;
+            font-size: clamp(2rem, 3vw, 2.6rem);
+            line-height: 1.1;
+            letter-spacing: -0.05em;
+            color: #10283b;
+        }
+
+        .article-body h3 {
+            margin-top: 30px;
+            margin-bottom: 12px;
+            font-size: 1.28rem;
+            color: #10283b;
+        }
+
+        .article-body ul {
+            margin: 18px 0 0 20px;
+        }
+
+        .article-body li + li {
+            margin-top: 10px;
+        }
+
+        .article-body blockquote {
+            margin: 28px 0;
+            padding: 22px 24px;
+            background: linear-gradient(135deg, #dfeef9, #edf6ff);
+            border-left: 4px solid #1b4670;
+            color: #17324f;
+            font-size: 1.08rem;
+            line-height: 1.7;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 94px;
+        }
+
+        .sidebar-card {
+            background: #fff;
+            border: 1px solid rgba(16, 40, 59, 0.08);
+            padding: 22px 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 12px 30px rgba(16, 40, 59, 0.04);
+        }
+
+        .sidebar-card h3 {
+            margin-bottom: 14px;
+            font-size: 0.9rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #6f8ca5;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .checklist li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.97rem;
+            color: #274d6d;
+            line-height: 1.7;
+        }
+
+        .checklist li + li {
+            margin-top: 12px;
+        }
+
+        .checklist li::before {
+            content: '✓';
+            color: #1b4670;
+            font-weight: 800;
+            margin-top: 1px;
+        }
+
+        .cta-panel {
+            margin-top: 48px;
+            background: linear-gradient(135deg, #081a26, #12304b);
+            color: white;
+            padding: 38px 28px;
+            text-align: center;
+        }
+
+        .cta-panel h3 {
+            font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+            letter-spacing: -0.05em;
+            margin-bottom: 12px;
+        }
+
+        .cta-panel p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 26px;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background: #9fe1ff;
+            color: #10283b;
+            box-shadow: 0 14px 28px rgba(159, 225, 255, 0.25);
+        }
+
+        .footer {
+            background: #081a26;
+            color: #ebf4ff;
+            padding: 36px 0 26px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(235, 244, 255, 0.8);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 28px;
+            padding-top: 18px;
+            text-align: center;
+            color: rgba(255,255,255,0.72);
+            font-size: 0.88rem;
+        }
+
+        @media (max-width: 820px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 74px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: rgba(237, 244, 251, 0.98);
+                border: 1px solid rgba(16, 40, 59, 0.08);
+                border-radius: 14px;
+                box-shadow: 0 18px 35px rgba(16, 40, 59, 0.08);
+                padding: 8px 0;
+                z-index: 30;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                display: block;
+                padding: 14px 18px;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .article-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .navbar .container {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 10px 0;
+                gap: 12px;
+            }
+
+            .blog-hero {
+                padding-top: 90px;
+            }
+
+            .hero-meta {
+                gap: 8px 14px;
+            }
+        }
+    </style>
+</head>
+<body class="article-page">
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="Biohackn home">
+                <img src="Gideon.jpg" alt="Biohackn logo" class="logo-img">
+                <span>Biohackn</span>
+            </a>
+            <div class="nav-toggle" id="navToggle" aria-label="Open navigation" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="infraredSaunas.html">Infrared Saunas</a></li>
+                <li><a href="coldPlunges.html">Cold Plunges</a></li>
+                <li><a href="hyperbaric.html">Hyperbaric</a></li>
+                <li><a href="https://wa.me/971585346954" class="cta-button">Talk to an expert</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="container">
+            <p class="eyebrow">Recovery science</p>
+            <h1>Cold Therapy: Recovery Science Explained</h1>
+            <div class="hero-meta">
+                <span>By Biohackn</span>
+                <span>•</span>
+                <span>5 min read</span>
+                <span>•</span>
+                <span>Updated 2026</span>
+            </div>
+            <p class="hero-intro">Cold therapy is one of the most studied recovery tools in modern wellness. It can reduce inflammation, help with soreness, and sharpen your sense of reset after hard training or intense physical stress.</p>
+        </div>
+    </header>
+
+    <main class="article-shell">
+        <div class="container article-layout">
+            <article class="article-body">
+                <p>Cold exposure has become a familiar ritual in high-performance circles, from ice baths and cold plunges to post-workout recovery routines. It is simple, effective, and surprisingly powerful when used with intention.</p>
+
+                <p>At its core, cold therapy triggers a physiological response that can reduce local tissue temperature, slow metabolic activity, and temporarily lower blood flow to the area being exposed to cold. That response is why it is often used to manage post-exercise inflammation and soreness.</p>
+
+                <h2>Why it works</h2>
+                <p>When the body is stressed by hard training, inflammation and microtrauma are common. Cold exposure can help reduce some of that inflammatory cascade by narrowing blood vessels and lowering tissue temperature. This may provide a short-term recovery benefit, especially after strenuous sessions.</p>
+
+                <p>It can also help your nervous system shift out of a high-alert state. Many people report feeling mentally re-centered and physically “reset” after a brief cold immersion. That sensation is part of why cold therapy is often used as a recovery ritual—not just a physical intervention.</p>
+
+                <h2>What the science says</h2>
+                <p>Research on cold therapy suggests it can be useful for reducing perceived soreness, particularly in the hours after intense exercise. Some athletes also use it to manage swelling or to support a performance recovery routine between training sessions.</p>
+
+                <p>That said, the benefits are not universal. Cold therapy is not a cure-all. It can be extremely helpful when used strategically, but it is not automatically the best option for every training goal or every type of stress.</p>
+
+                <blockquote>“Cold therapy is most effective when it supports your overall recovery plan—not when it becomes a ritual for its own sake.”</blockquote>
+
+                <h2>Cold plunges vs. other recovery methods</h2>
+                <p>Cold immersion is only one recovery tool in a broader system. It can complement movement, sleep, hydration, and nutrition—but it should not replace them.</p>
+
+                <ul>
+                    <li><strong>Cold plunges</strong> may help with inflammation and recovery after hard efforts.</li>
+                    <li><strong>Infrared sauna</strong> is often used to promote relaxation and circulation in a warmer, more soothing environment.</li>
+                    <li><strong>Sleep and hydration</strong> remain the foundation of most effective recovery strategies.</li>
+                </ul>
+
+                <p>In other words, cold exposure is best viewed as one piece of the puzzle rather than a magic shortcut. If your training demands are high, recovery is often strongest when multiple strategies work together.</p>
+
+                <h2>When cold therapy is especially useful</h2>
+                <p>Cold therapy may be most useful when you are dealing with:</p>
+
+                <ul>
+                    <li>High-intensity exercise or sprint work</li>
+                    <li>Heavy leg or joint soreness after a demanding session</li>
+                    <li>A desire to reduce perceived fatigue and “reset” mentally</li>
+                    <li>A need for a short, sharp recovery stimulus between training blocks</li>
+                </ul>
+
+                <p>For many people, a brief plunge or cold shower after intense effort gives them a clear signal that the body is shifting back into recovery mode.</p>
+
+                <h2>How long and how cold?</h2>
+                <p>There is no perfect universal protocol, but most recovery-focused routines use short, controlled exposures rather than prolonged immersion. A session that is brief, intentional, and measured usually feels more sustainable than a longer, more extreme one.</p>
+
+                <p>Start gently and build up as your comfort level grows. The goal is not to “win” the cold—it is to use the stress of the cold in a way that supports recovery instead of undermining your body’s ability to adapt.</p>
+
+                <h2>What to watch for</h2>
+                <p>Cold therapy is not right for everyone. It can be intense, especially if you are not used to it, and it may not suit people with certain cardiovascular or medical concerns. If you have a history of blood pressure issues or other medical considerations, it is wise to consult a healthcare professional before regular cold exposure.</p>
+
+                <p>Also, timing matters. If you use cold therapy too close to a workout you need to perform at your best, it may blunt some training adaptations or create a stress response that is not ideal for that session. Recovery and performance are not always served by the same tool at the same time.</p>
+
+                <h2>For most people, consistency matters most</h2>
+                <p>The most effective cold therapy routines are the ones that fit your life. A brief, repeatable session is more beneficial than a dramatic but unsustainable one. If the routine is manageable and enjoyable, it is much more likely to become part of a healthy system.</p>
+
+                <p>As with most wellness practices, the best plan is the one that supports your energy, your training, and your long-term health. Cold plunges are a great tool when used with intention, but they work best as part of a bigger recovery picture.</p>
+
+                <h2>Final takeaway</h2>
+                <p>Cold therapy is a powerful and evidence-backed recovery tool when used properly. It can reduce inflammation, support soreness management, and help reset the body after intense stress. But it works best as one part of a broader strategy that includes sleep, nutrition, movement, and smart recovery planning.</p>
+            </article>
+
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h3>Key takeaways</h3>
+                    <ul class="checklist">
+                        <li>Cold reduces inflammation and perceived soreness</li>
+                        <li>Short, controlled sessions tend to work best</li>
+                        <li>It is strongest when paired with sleep and recovery habits</li>
+                        <li>Not every athlete benefits from the same exposure pattern</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Best for</h3>
+                    <ul class="checklist">
+                        <li>Post-training recovery</li>
+                        <li>Reducing soreness and fatigue</li>
+                        <li>Resetting after intense effort</li>
+                        <li>Creating a consistent wellness ritual</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <div class="container">
+            <div class="cta-panel">
+                <h3>Looking for a cold recovery setup?</h3>
+                <p>Talk to Biohackn about cold plunge options that fit your routine, space, and recovery goals.</p>
+                <a href="https://wa.me/971585346954" class="btn btn-primary">Book a consultation</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>Biohackn</h4>
+                <p>Wellness systems designed to support recovery, performance, and everyday vitality.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Explore</h4>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="coldPlunges.html">Cold plunges</a></p>
+                <p><a href="infraredSaunas.html">Infrared saunas</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <p><a href="https://wa.me/971585346954">WhatsApp support</a></p>
+                <p><a href="mailto:hello@biohackn.com">hello@biohackn.com</a></p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            &copy; 2026 Biohackn. All rights reserved.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

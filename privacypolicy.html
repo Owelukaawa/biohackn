@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Biohackn Privacy Policy. Learn how Biohackn collects, uses, and protects your personal information.">
+	<title>Privacy Policy | Biohackn</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		:root {
+			--policy-ink: #171512;
+			--policy-muted: #625b54;
+			--policy-paper: #f5f0e8;
+			--policy-panel: #ffffff;
+			--policy-line: #ddd2c5;
+			--policy-orange: #c65b2d;
+			--policy-deep: #171512;
+		}
+
+		.privacy-page {
+			background: var(--policy-paper);
+			color: var(--policy-ink);
+			font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+			line-height: 1.7;
+		}
+
+		.privacy-page a { color: var(--policy-orange); }
+		.privacy-page .policy-nav {
+			align-items: center;
+			background: var(--policy-deep);
+			color: white;
+			display: flex;
+			justify-content: space-between;
+			min-height: 76px;
+			padding: 0 6vw;
+		}
+
+		.policy-brand { align-items: center; display: inline-flex; gap: 10px; text-decoration: none; }
+		.policy-brand img { border-radius: 50%; height: 38px; object-fit: cover; width: 38px; }
+		.policy-brand-name { background: linear-gradient(105deg, #ffffff 0%, #ffffff 48%, #f08a4b 100%); color: white; font-size: 26px; font-weight: 800; letter-spacing: -1.5px; line-height: 1; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+		.policy-nav-links { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+		.policy-nav-links a { color: rgba(255,255,255,.8); font-size: 13px; text-decoration: none; }
+		.policy-nav-links a:hover { color: #f08a4b; }
+
+		.policy-hero {
+			background: linear-gradient(135deg, #171512, #33241d);
+			color: white;
+			padding: 86px 6vw 82px;
+		}
+
+		.policy-hero-inner { margin: 0 auto; max-width: 1120px; }
+		.policy-kicker { color: #f08a4b; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+		.policy-hero h1 { font-size: clamp(44px, 7vw, 78px); letter-spacing: -3px; line-height: 1; margin: 18px 0 22px; }
+		.policy-hero p { color: rgba(255,255,255,.78); font-size: 17px; margin: 0; max-width: 580px; }
+
+		.policy-layout { display: grid; gap: 68px; grid-template-columns: 220px minmax(0, 720px); margin: 0 auto; max-width: 1120px; padding: 70px 6vw 100px; }
+		.policy-toc { align-self: start; position: sticky; top: 24px; }
+		.policy-toc-title { color: var(--policy-ink); font-size: 11px; font-weight: 800; letter-spacing: 1.5px; margin: 0 0 14px; text-transform: uppercase; }
+		.policy-toc ol { border-left: 1px solid var(--policy-line); list-style: none; margin: 0; padding: 0 0 0 17px; }
+		.policy-toc li { margin: 10px 0; }
+		.policy-toc a { color: var(--policy-muted); font-size: 13px; line-height: 1.35; text-decoration: none; }
+		.policy-toc a:hover { color: var(--policy-orange); }
+
+		.policy-document { background: var(--policy-panel); border: 1px solid var(--policy-line); padding: clamp(28px, 5vw, 58px); }
+		.policy-meta { border-bottom: 1px solid var(--policy-line); color: var(--policy-muted); font-size: 13px; margin-bottom: 34px; padding-bottom: 24px; }
+		.policy-document h2 { color: var(--policy-ink); font-size: 25px; letter-spacing: -.4px; line-height: 1.2; margin: 42px 0 14px; }
+		.policy-document h2:first-of-type { margin-top: 0; }
+		.policy-document h3 { color: var(--policy-ink); font-size: 17px; margin: 24px 0 7px; }
+		.policy-document p { color: var(--policy-muted); font-size: 15px; margin: 0 0 16px; }
+		.policy-document ul { color: var(--policy-muted); font-size: 15px; margin: 0 0 18px; padding-left: 22px; }
+		.policy-document li { margin: 8px 0; padding-left: 4px; }
+		.policy-contact { background: #fff0e5; border-left: 3px solid var(--policy-orange); margin-top: 24px; padding: 19px 22px; }
+		.policy-contact p { margin: 0; }
+
+		.policy-footer { background: #171512; color: rgba(255,255,255,.7); padding: 32px 6vw; }
+		.policy-footer-inner { align-items: center; display: flex; justify-content: space-between; margin: 0 auto; max-width: 1120px; }
+		.policy-footer p { font-size: 12px; margin: 0; }
+		.policy-footer a { color: #f08a4b; font-size: 12px; text-decoration: none; }
+
+		@media (max-width: 760px) {
+			.privacy-page .policy-nav { min-height: 68px; }
+			.policy-nav-links { gap: 14px; }
+			.policy-nav-links li:nth-child(2) { display: none; }
+			.policy-hero { padding: 62px 7vw 58px; }
+			.policy-hero h1 { letter-spacing: -2px; }
+			.policy-layout { display: block; padding: 38px 5vw 64px; }
+			.policy-toc { margin-bottom: 30px; position: static; }
+			.policy-toc ol { display: grid; gap: 4px 20px; grid-template-columns: repeat(2, 1fr); }
+			.policy-document { padding: 27px 22px; }
+			.policy-footer-inner { align-items: flex-start; flex-direction: column; gap: 12px; }
+		}
+	</style>
+</head>
+<body class="privacy-page">
+	<a class="skip-link" href="#policy-content">Skip to privacy policy</a>
+	<nav class="policy-nav" aria-label="Primary navigation">
+		<a class="policy-brand" href="index.html"><img src="Gideon.jpg" alt="Biohackn logo"><span class="policy-brand-name">Biohackn</span></a>
+		<ul class="policy-nav-links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="index.html#products">Wellness solutions</a></li>
+			<li><a href="https://wa.me/971547119996">Speak with an expert</a></li>
+		</ul>
+	</nav>
+
+	<header class="policy-hero">
+		<div class="policy-hero-inner">
+			<div class="policy-kicker">Trust &amp; transparency</div>
+			<h1>Privacy Policy</h1>
+			<p>How Biohackn collects, uses, and protects your personal information when you explore our wellness solutions or shop with us.</p>
+		</div>
+	</header>
+
+	<main class="policy-layout" id="policy-content">
+		<aside class="policy-toc" aria-label="Privacy policy sections">
+			<p class="policy-toc-title">On this page</p>
+			<ol>
+				<li><a href="#information">Information we collect</a></li>
+				<li><a href="#use">How we use it</a></li>
+				<li><a href="#sharing">How we share it</a></li>
+				<li><a href="#cookies">Cookies</a></li>
+				<li><a href="#services">Service providers</a></li>
+				<li><a href="#rights">Your rights</a></li>
+				<li><a href="#contact">Contact us</a></li>
+			</ol>
+		</aside>
+
+		<article class="policy-document">
+			<div class="policy-meta"><strong>Last updated:</strong> July 16, 2026</div>
+
+			<p>Biohackn operates this website and store, including its content, features, products, and services (the “Services”).</p>
+			<p>This Privacy Policy explains how we collect, use, disclose, and protect personal information when you visit our website, communicate with us, or place an order. By using the Services, you acknowledge that you have read and understood this policy.</p>
+
+			<h2 id="information">1. Information we collect</h2>
+			<p>We collect information you provide directly and information collected automatically when you use the Services. Depending on how you interact with us, this may include:</p>
+			<ul>
+				<li><strong>Contact and order details:</strong> your name, email address, telephone number, billing address, shipping address, and order history.</li>
+				<li><strong>Payment details:</strong> transaction information and payment method details. Payment card data is handled by our payment providers.</li>
+				<li><strong>Communications:</strong> messages, support requests, feedback, and any information you choose to include when contacting us.</li>
+				<li><strong>Device and usage data:</strong> IP address, browser type, device details, referring pages, pages or products viewed, and how you interact with the website.</li>
+			</ul>
+
+			<h2 id="use">2. How we use your information</h2>
+			<p>We use personal information where necessary to provide the Services, fulfill our business purposes, or comply with the law. This includes:</p>
+			<ul>
+				<li>Processing, fulfilling, shipping, and supporting your orders, including returns and exchanges.</li>
+				<li>Responding to questions and providing customer care or product guidance.</li>
+				<li>Personalizing, maintaining, analyzing, and improving our website, products, and Services.</li>
+				<li>Sending order updates and, where permitted by law and your preferences, news or marketing communications. You can unsubscribe from promotional emails at any time.</li>
+				<li>Detecting, investigating, and preventing fraud, abuse, security incidents, or other harmful activity.</li>
+				<li>Complying with legal obligations and enforcing our agreements and policies.</li>
+			</ul>
+
+			<h2 id="sharing">3. How we share your information</h2>
+			<p>We may share personal information with trusted service providers that help us operate our business, including payment processors, analytics providers, customer support tools, marketing partners, fulfillment providers, and shipping companies.</p>
+			<p>We may also disclose information when you ask us to, when you consent, when required by law or legal process, or when reasonably necessary to protect Biohackn, our customers, or others. We do not sell personal information for money.</p>
+
+			<h2 id="cookies">4. Cookies and similar technologies</h2>
+			<p>We and our service providers use cookies, pixels, tags, and similar technologies to keep the website working, remember preferences, understand traffic and usage, support security, and measure marketing performance. You can adjust cookie settings through your browser, although some features may not work as intended afterward.</p>
+
+			<h2 id="services">5. Service providers and third-party links</h2>
+			<p>Information submitted through the Services may be processed by service providers in countries outside your own. These providers may support payments, delivery, analytics, communications, security, or other business operations, and may process information only as needed to perform their services.</p>
+			<p>Third-party websites, social platforms, payment services, and other tools linked from our Services have their own privacy policies. We are not responsible for the privacy or security practices of websites we do not control. We encourage you to review their policies before sharing information.</p>
+
+			<h2>6. Children’s data</h2>
+			<p>The Services are not intended for children. We do not knowingly collect personal information from children under the age of majority in their jurisdiction. If you believe a child has provided us with personal information, please contact us so we can take appropriate steps to delete it.</p>
+
+			<h2>7. Security and retention</h2>
+			<p>We use reasonable administrative, technical, and organizational safeguards designed to protect personal information. No transmission or storage method is completely secure, so we cannot guarantee absolute security.</p>
+			<p>We retain information for as long as needed to provide the Services, complete transactions, maintain business and financial records, resolve disputes, enforce agreements, and meet legal obligations.</p>
+
+			<h2 id="rights">8. Your rights and choices</h2>
+			<p>Depending on where you live, you may have rights to access, correct, delete, or receive a copy of your personal information. You may also be able to object to or restrict certain processing, withdraw consent where processing is based on consent, or opt out of marketing communications.</p>
+			<p>To unsubscribe from promotional emails, use the unsubscribe link in the message. We may still send essential, non-promotional messages about orders or your account. We may need to verify your identity before completing a privacy request, as permitted by law.</p>
+
+			<h2>9. International transfers and complaints</h2>
+			<p>Your information may be stored or processed outside the country where you live. Where required, we use appropriate safeguards for international transfers. If you have a concern about our handling of personal information, please contact us first. You may also have the right to contact your local data protection authority.</p>
+
+			<h2>10. Changes to this policy</h2>
+			<p>We may update this Privacy Policy from time to time to reflect changes in our practices, Services, or legal requirements. We will post the revised version on this page and update the “Last updated” date.</p>
+
+			<h2 id="contact">11. Contact us</h2>
+			<p>If you have questions about this policy, want to exercise an available privacy right, or would like to make a complaint, please contact Biohackn:</p>
+			<div class="policy-contact">
+				<p><strong>Email:</strong> <a href="mailto:contact@biohackn.com">contact@biohackn.com</a><br>
+				<strong>Phone:</strong> <a href="tel:+971547119996">+971 54 711 9996</a><br>
+				<strong>Location:</strong> Dubai, United Arab Emirates</p>
+			</div>
+		</article>
+	</main>
+
+	<footer class="policy-footer">
+		<div class="policy-footer-inner">
+			<p>&copy; 2026 Biohackn. Built for a healthier, more resilient life.</p>
+			<a href="index.html">Back to Biohackn</a>
+		</div>
+	</footer>
+</body>
+</html>

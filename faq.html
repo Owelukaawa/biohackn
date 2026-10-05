@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently asked questions about Biohackn products, wellness solutions, delivery, support, and ordering.">
+    <title>Frequently Asked Questions | Biohackn</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --faq-ink: #171512;
+            --faq-muted: #625b54;
+            --faq-paper: #f5f0e8;
+            --faq-panel: #ffffff;
+            --faq-line: #ddd2c5;
+            --faq-orange: #c65b2d;
+            --faq-deep: #171512;
+        }
+
+        .faq-page {
+            background: var(--faq-paper);
+            color: var(--faq-ink);
+            font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+            line-height: 1.7;
+        }
+
+        .faq-page a { color: var(--faq-orange); }
+        .faq-page .faq-nav {
+            align-items: center;
+            background: var(--faq-deep);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            min-height: 76px;
+            padding: 0 6vw;
+        }
+
+        .faq-brand { align-items: center; display: inline-flex; gap: 10px; text-decoration: none; }
+        .faq-brand img { border-radius: 50%; height: 38px; object-fit: cover; width: 38px; }
+        .faq-brand-name { background: linear-gradient(105deg, #ffffff 0%, #ffffff 48%, #f08a4b 100%); color: white; font-size: 26px; font-weight: 800; letter-spacing: -1.5px; line-height: 1; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .faq-nav-links { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+        .faq-nav-links a { color: rgba(255,255,255,.8); font-size: 13px; text-decoration: none; }
+        .faq-nav-links a:hover { color: #f08a4b; }
+
+        .faq-hero { background: linear-gradient(135deg, #171512, #33241d); color: white; padding: 86px 6vw 82px; }
+        .faq-hero-inner { margin: 0 auto; max-width: 1120px; }
+        .faq-kicker { color: #f08a4b; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+        .faq-hero h1 { font-size: clamp(44px, 7vw, 78px); letter-spacing: -3px; line-height: 1; margin: 18px 0 22px; }
+        .faq-hero p { color: rgba(255,255,255,.78); font-size: 17px; margin: 0; max-width: 600px; }
+
+        .faq-main { margin: 0 auto; max-width: 1120px; padding: 70px 6vw 100px; }
+        .faq-intro { align-items: end; display: flex; justify-content: space-between; margin-bottom: 48px; }
+        .faq-intro h2 { color: var(--faq-ink); font-size: 34px; letter-spacing: -1px; line-height: 1.1; margin: 0; }
+        .faq-intro p { color: var(--faq-muted); font-size: 14px; margin: 0; max-width: 360px; }
+        .faq-category { margin-top: 52px; }
+        .faq-category:first-of-type { margin-top: 0; }
+        .faq-category h3 { align-items: center; color: var(--faq-ink); display: flex; font-size: 13px; gap: 12px; letter-spacing: 1.5px; margin: 0 0 14px; text-transform: uppercase; }
+        .faq-category h3::before { background: var(--faq-orange); content: ""; display: block; height: 3px; width: 28px; }
+        .faq-list { border-top: 1px solid var(--faq-line); }
+        .faq-item { background: var(--faq-panel); border-bottom: 1px solid var(--faq-line); }
+        .faq-item summary { align-items: center; cursor: pointer; display: flex; font-size: 17px; font-weight: 700; justify-content: space-between; list-style: none; padding: 23px 26px; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { color: var(--faq-orange); content: "+"; flex: 0 0 auto; font-size: 25px; font-weight: 400; line-height: 1; margin-left: 20px; }
+        .faq-item[open] summary::after { content: "-"; }
+        .faq-item summary:focus-visible { outline: 2px solid var(--faq-orange); outline-offset: -2px; }
+        .faq-answer { border-top: 1px solid #eee5db; padding: 0 70px 24px 26px; }
+        .faq-answer p { color: var(--faq-muted); font-size: 15px; margin: 17px 0 0; max-width: 720px; }
+
+        .faq-cta { background: var(--faq-deep); color: white; margin-top: 70px; padding: 44px clamp(24px, 5vw, 58px); }
+        .faq-cta h2 { font-size: clamp(27px, 4vw, 40px); letter-spacing: -1px; line-height: 1.1; margin: 0 0 12px; }
+        .faq-cta p { color: rgba(255,255,255,.72); font-size: 15px; margin: 0 0 24px; max-width: 520px; }
+        .faq-cta a { background: var(--faq-orange); color: white; display: inline-block; font-size: 13px; font-weight: 800; padding: 13px 20px; text-decoration: none; }
+        .faq-cta a:hover { background: #e07540; }
+
+        .faq-footer { background: #171512; color: rgba(255,255,255,.7); padding: 32px 6vw; }
+        .faq-footer-inner { align-items: center; display: flex; justify-content: space-between; margin: 0 auto; max-width: 1120px; }
+        .faq-footer p { font-size: 12px; margin: 0; }
+        .faq-footer a { color: #f08a4b; font-size: 12px; text-decoration: none; }
+
+        @media (max-width: 760px) {
+            .faq-page .faq-nav { min-height: 68px; }
+            .faq-nav-links { gap: 14px; }
+            .faq-nav-links li:nth-child(2) { display: none; }
+            .faq-hero { padding: 62px 7vw 58px; }
+            .faq-hero h1 { letter-spacing: -2px; }
+            .faq-main { padding: 42px 5vw 64px; }
+            .faq-intro { align-items: start; flex-direction: column; gap: 14px; margin-bottom: 38px; }
+            .faq-item summary { font-size: 15px; padding: 19px 18px; }
+            .faq-answer { padding: 0 40px 20px 18px; }
+            .faq-footer-inner { align-items: flex-start; flex-direction: column; gap: 12px; }
+        }
+    </style>
+</head>
+<body class="faq-page">
+    <a class="skip-link" href="#faq-content">Skip to frequently asked questions</a>
+    <nav class="faq-nav" aria-label="Primary navigation">
+        <a class="faq-brand" href="index.html"><img src="Gideon.jpg" alt="Biohackn logo"><span class="faq-brand-name">Biohackn</span></a>
+        <ul class="faq-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products">Wellness solutions</a></li>
+            <li><a href="https://wa.me/971547119996">Speak with an expert</a></li>
+        </ul>
+    </nav>
+
+    <header class="faq-hero">
+        <div class="faq-hero-inner">
+            <div class="faq-kicker">Answers for your next step</div>
+            <h1>Frequently Asked Questions</h1>
+            <p>Everything you need to know about Biohackn products, choosing the right wellness solution, and getting support.</p>
+        </div>
+    </header>
+
+    <main class="faq-main" id="faq-content">
+        <div class="faq-intro">
+            <h2>Find your answer</h2>
+            <p>Explore the topics below or speak directly with our team for guidance tailored to your goals.</p>
+        </div>
+
+        <section class="faq-category" aria-labelledby="products-heading">
+            <h3 id="products-heading">Products and wellness</h3>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>What products does Biohackn offer?</summary>
+                    <div class="faq-answer"><p>We offer premium wellness technologies including infrared saunas, cold plunges, red light therapy panels, hyperbaric systems, PEMF devices, blue-light blocking glasses, hydrogen water products, and other wellness essentials.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>Which product is right for my goals?</summary>
+                    <div class="faq-answer"><p>It depends on your goals, space, routine, and experience. Infrared saunas are often chosen for heat-based relaxation and recovery, cold plunges for cold exposure and post-training recovery, red light therapy for convenient daily sessions, and hyperbaric systems for specialized oxygen-based wellness routines. Our team can help you compare options.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>Are Biohackn products medical treatments?</summary>
+                    <div class="faq-answer"><p>Biohackn products and website content are provided for general wellness and informational purposes. They are not a substitute for medical advice, diagnosis, or treatment. Consult a qualified healthcare professional before beginning a new wellness routine, especially if you have a medical condition, are pregnant, or take medication.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>Do products include setup or usage guidance?</summary>
+                    <div class="faq-answer"><p>Product-specific instructions and support vary by item. Before using any equipment, read the supplied instructions and follow the recommended setup and safety guidance. Our support team can help with general product questions and next steps.</p></div>
+                </details>
+            </div>
+        </section>
+
+        <section class="faq-category" aria-labelledby="orders-heading">
+            <h3 id="orders-heading">Orders and delivery</h3>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>How do I place an order?</summary>
+                    <div class="faq-answer"><p>Browse our wellness solutions, open the product you are interested in, and follow the checkout steps. If you would like help selecting a product before ordering, contact our team through WhatsApp.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>Where does Biohackn deliver?</summary>
+                    <div class="faq-answer"><p>Biohackn serves customers across Dubai and the UAE. Delivery availability, timing, and installation requirements can vary by product and location, so we recommend confirming details with our team before ordering larger equipment.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>How long does delivery take?</summary>
+                    <div class="faq-answer"><p>Delivery timing depends on the product, stock status, destination, and any required logistics or installation. The team will confirm the expected timeframe for your order. Delays can occasionally occur because of circumstances outside our control.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I change or cancel my order?</summary>
+                    <div class="faq-answer"><p>Contact us as soon as possible with your order details. We will do our best to help, but changes or cancellations may not be possible once an order has been processed, dispatched, or prepared for installation.</p></div>
+                </details>
+            </div>
+        </section>
+
+        <section class="faq-category" aria-labelledby="support-heading">
+            <h3 id="support-heading">Returns and support</h3>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>What is your return or refund policy?</summary>
+                    <div class="faq-answer"><p>Returns, exchanges, cancellations, and refunds depend on the product and the applicable store policy. Contact us before sending anything back so we can confirm eligibility, required documentation, and the next steps.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>What if my order arrives damaged or incomplete?</summary>
+                    <div class="faq-answer"><p>Contact us promptly with your order number and clear photos of the packaging and product. Please keep the original packaging until we confirm the resolution. We will review the issue and guide you through the available options.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>How can I contact Biohackn?</summary>
+                    <div class="faq-answer"><p>Our team is available at <a href="mailto:contact@biohackn.com">contact@biohackn.com</a>, by phone at <a href="tel:+971547119996">+971 54 711 9996</a>, or through <a href="https://wa.me/971547119996">WhatsApp</a>. For product recommendations, include your goals, location, and any relevant timing or space requirements.</p></div>
+                </details>
+            </div>
+        </section>
+
+        <section class="faq-cta" aria-labelledby="faq-cta-heading">
+            <h2 id="faq-cta-heading">Still have a question?</h2>
+            <p>Tell us what you are trying to improve and our team will help you find the right place to start.</p>
+            <a href="https://wa.me/971547119996">Speak with an expert</a>
+        </section>
+    </main>
+
+    <footer class="faq-footer">
+        <div class="faq-footer-inner">
+            <p>&copy; 2026 Biohackn. Built for a healthier, more resilient life.</p>
+            <a href="index.html">Back to Biohackn</a>
+        </div>
+    </footer>
+</body>
+</html>

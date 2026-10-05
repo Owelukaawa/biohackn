@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore red light therapy insights, benefits, and how athletes and everyday wellness routines can use it for recovery, skin health, and performance support.">
+    <title>Red Light Therapy | Biohackn</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --redlight-ink: #1a1714;
+            --redlight-panel: #f8f3ee;
+            --redlight-warm: #f5b26d;
+            --redlight-amber: #ef9047;
+            --redlight-deep: #3f1a10;
+            --redlight-soft: #fce7d4;
+            --redlight-slate: #655d55;
+            --redlight-white: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--redlight-panel);
+            color: var(--redlight-ink);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(248, 243, 238, 0.96);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(26, 23, 20, 0.08);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 74px;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            font-size: 1.8rem;
+        }
+
+        .logo-img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu a {
+            font-size: 0.9rem;
+            color: var(--redlight-ink);
+            transition: color 0.2s ease;
+        }
+
+        .nav-menu a:hover { color: var(--redlight-amber); }
+
+        .cta-button {
+            background: var(--redlight-ink);
+            color: #fff !important;
+            padding: 12px 18px;
+            border-radius: 999px;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 42px;
+            height: 42px;
+            border: 1px solid rgba(26, 23, 20, 0.12);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: var(--redlight-ink);
+            margin: 0 auto;
+            border-radius: 999px;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 690px;
+            display: flex;
+            align-items: center;
+            color: white;
+            background: linear-gradient(135deg, rgba(30, 20, 14, 0.78), rgba(30, 20, 14, 0.42)),
+                url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            padding: 100px 0 70px;
+        }
+
+        .eyebrow {
+            margin: 0 0 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #f6d5a9;
+        }
+
+        .eyebrow-accent {
+            color: var(--redlight-amber);
+        }
+
+        .eyebrow-soft {
+            color: #f7d3a2;
+        }
+
+        .lead-title {
+            margin-bottom: 28px;
+        }
+
+        .hero h1 {
+            margin: 0 0 22px;
+            font-size: clamp(3rem, 6vw, 6rem);
+            letter-spacing: -0.07em;
+            line-height: 0.96;
+        }
+
+        .hero h1 em {
+            color: #f6d5a9;
+            font-style: normal;
+        }
+
+        .hero-copy {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.86);
+            max-width: 560px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 34px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 26px;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f2b573, #ef9047);
+            color: var(--redlight-ink);
+            box-shadow: 0 16px 30px rgba(239, 144, 71, 0.35);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: white;
+        }
+
+        .hero-note {
+            position: absolute;
+            right: 34px;
+            bottom: 28px;
+            font-size: 12px;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .section {
+            padding: 110px 0;
+        }
+
+        .intro-grid,
+        .benefit-layout,
+        .guide-grid,
+        .safety-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .intro-copy,
+        .guide-content,
+        .safety-content {
+            font-size: 1.06rem;
+            line-height: 1.8;
+            color: var(--redlight-slate);
+        }
+
+        .section h2 {
+            margin: 0 0 18px;
+            font-size: clamp(2.4rem, 4vw, 4rem);
+            letter-spacing: -0.06em;
+            line-height: 1.05;
+        }
+
+        .section h3 {
+            margin: 0 0 14px;
+            font-size: 1.35rem;
+            color: var(--redlight-ink);
+        }
+
+        .intro-copy p + p,
+        .guide-content p + p,
+        .safety-content p + p {
+            margin-top: 18px;
+        }
+
+        .panel {
+            background: rgba(255,255,255,0.5);
+            border: 1px solid rgba(26,23,20,0.08);
+            box-shadow: 0 20px 50px rgba(26,23,20,0.04);
+            padding: 28px 24px;
+        }
+
+        .spectrum {
+            background: linear-gradient(180deg, #f9f1e9, #f4e7d9);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 42px;
+        }
+
+        .section-header p {
+            color: var(--redlight-slate);
+            max-width: 360px;
+            line-height: 1.7;
+            font-size: 0.96rem;
+        }
+
+        .spectrum-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            align-items: stretch;
+        }
+
+        .spectrum-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 28px 24px 26px;
+            min-height: 420px;
+            background: rgba(255,255,255,0.7);
+            border: 1px solid rgba(26,23,20,0.1);
+            border-radius: 28px;
+            box-shadow: 0 16px 34px rgba(26,23,20,0.06);
+            overflow: hidden;
+        }
+
+        .spectrum-card.dark {
+            background: #1d1715;
+            color: white;
+            border-color: rgba(255,255,255,0.08);
+        }
+
+        .spectrum-card.ink {
+            background: linear-gradient(180deg, #f5d8b8 0%, #f2c089 100%);
+        }
+
+        .spectrum-card.dark .num,
+        .spectrum-card.dark .tag,
+        .spectrum-card.dark .body-copy,
+        .spectrum-card.dark .spectrum-title-sub,
+        .spectrum-card.dark .spectrum-title {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .num {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            color: #d59a5a;
+            margin-bottom: 32px;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        .wave {
+            display: block;
+            font-size: clamp(3.5rem, 6vw, 7rem);
+            font-weight: 800;
+            letter-spacing: -0.08em;
+            line-height: 0.8;
+            margin: 0 0 20px;
+            color: var(--redlight-amber);
+        }
+
+        .spectrum-card.dark .wave {
+            color: #e7d4b7;
+        }
+
+        .spectrum-title {
+            display: block;
+            font-size: clamp(2rem, 3vw, 3.2rem);
+            line-height: 1;
+            letter-spacing: -0.07em;
+            margin-bottom: 18px;
+            color: var(--redlight-ink);
+        }
+
+        .spectrum-card.dark .spectrum-title {
+            color: #f3e7d6;
+        }
+
+        .spectrum-title-sub {
+            display: block;
+            margin-bottom: 18px;
+            font-size: clamp(1.2rem, 1.7vw, 1.8rem);
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            color: #4c433f;
+        }
+
+        .body-copy {
+            margin-top: auto;
+            font-size: 1.03rem;
+            line-height: 1.75;
+            letter-spacing: -0.02em;
+            color: #1a1714;
+        }
+
+        .spectrum-card.dark .body-copy {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 0.82rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--redlight-amber);
+            font-weight: 700;
+        }
+
+        .benefits-band {
+            background: linear-gradient(135deg, #2c201a, #49342d);
+            color: white;
+        }
+
+        .benefit-list {
+            border-top: 1px solid rgba(255,255,255,0.25);
+            margin-top: 20px;
+        }
+
+        .benefit-item {
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            gap: 18px;
+            padding: 22px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.25);
+        }
+
+        .benefit-item span {
+            color: #f3d0a5;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+        }
+
+        .benefit-item h3 {
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .benefit-item p {
+            grid-column: 2;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .guide-visual {
+            min-height: 480px;
+            display: flex;
+            align-items: end;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(38,29,23,.15), rgba(38,29,23,.72)),
+                url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: white;
+        }
+
+        .quote {
+            font-size: clamp(1.8rem, 2.8vw, 3rem);
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+        }
+
+        .quote strong {
+            display: block;
+            color: #f5d8aa;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .check-list {
+            list-style: none;
+            padding: 0;
+            margin: 26px 0 0;
+        }
+
+        .check-list li {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 14px;
+            line-height: 1.7;
+            color: var(--redlight-ink);
+        }
+
+        .check-list li::before {
+            content: '✓';
+            color: var(--redlight-amber);
+            font-weight: 800;
+        }
+
+        .safety {
+            background: #f2e5d6;
+        }
+
+        .safety-points {
+            display: grid;
+            gap: 18px;
+        }
+
+        .safety-point {
+            display: grid;
+            grid-template-columns: 36px 1fr;
+            gap: 18px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(26,23,20,0.12);
+        }
+
+        .safety-point span {
+            color: var(--redlight-amber);
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 0.14em;
+        }
+
+        .safety-point p {
+            margin: 0;
+            color: var(--redlight-slate);
+            line-height: 1.7;
+        }
+
+        .cta {
+            background: #1d1a18;
+            color: white;
+            text-align: center;
+            padding: 110px 0;
+        }
+
+        .cta h2 {
+            text-align: center;
+            margin-bottom: 28px;
+            color: #f4f1ee;
+            font-size: clamp(3.2rem, 7vw, 9rem);
+            line-height: 0.9;
+            letter-spacing: -0.08em;
+            text-transform: none;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-kicker {
+            display: block;
+            font-size: clamp(0.9rem, 1.4vw, 1.5rem);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #f7d3a2;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .cta-word {
+            display: block;
+            margin-top: 14px;
+            letter-spacing: -0.08em;
+        }
+
+        .footer {
+            background: #1a1714;
+            color: #efe9e3;
+            padding: 44px 0 26px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+        .footer h4 {
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .footer p,
+        .footer a {
+            color: rgba(239,233,227,0.8);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 18px;
+            margin-top: 30px;
+            text-align: center;
+            color: rgba(255,255,255,0.72);
+            font-size: 0.87rem;
+        }
+
+        @media (max-width: 820px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 74px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: rgba(248,243,238,0.98);
+                border: 1px solid rgba(26,23,20,0.08);
+                border-radius: 14px;
+                box-shadow: 0 18px 35px rgba(26,23,20,0.08);
+                padding: 8px 0;
+                z-index: 30;
+            }
+
+            .nav-menu.active { display: flex; }
+            .nav-menu a { display: block; padding: 14px 18px; }
+            .nav-toggle { display: flex; }
+
+            .intro-grid,
+            .benefit-layout,
+            .guide-grid,
+            .safety-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            .spectrum-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                display: block;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero { min-height: 620px; }
+            .hero-content { padding-top: 80px; }
+            .hero-actions { flex-direction: column; align-items: flex-start; }
+            .hero-note { right: 20px; bottom: 18px; }
+            .section { padding: 80px 0; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="Biohackn home">
+                <img src="Gideon.jpg" alt="Biohackn" class="logo-img">
+                <span>Biohackn</span>
+            </a>
+            <div class="nav-toggle" id="navToggle" aria-label="Open navigation" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="infraredSaunas.html">Infrared Saunas</a></li>
+                <li><a href="coldPlunges.html">Cold Plunges</a></li>
+                <li><a href="hyperbaric.html">Hyperbaric</a></li>
+                <li><a href="https://wa.me/971585346954" class="cta-button">Talk to an expert</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="eyebrow">The science of light</p>
+                <h1>Red light. <em>Better recovery.</em></h1>
+                <p class="hero-copy">Red light therapy is being used by athletes, fitness professionals, and wellness-focused routines to support recovery, promote cellular function, and help the body feel more ready for the next session.</p>
+                <div class="hero-actions">
+                    <a href="#insights" class="btn btn-primary">Explore insights</a>
+                    <a href="https://wa.me/971585346954" class="btn btn-secondary">Speak to an expert</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-note">01 / RED LIGHT</div>
+    </header>
+
+    <main>
+        <section class="section" id="insights">
+            <div class="container intro-grid">
+                <div>
+                    <p class="eyebrow eyebrow-accent">Why athletes use it</p>
+                    <h2>Support your recovery without adding more stress.</h2>
+                </div>
+                <div class="intro-copy">
+                    <p>Red light therapy is a non-invasive recovery tool that uses specific wavelengths of light to support cellular function. The goal is not to “force” performance, but to help the body repair, recover, and feel more ready between sessions.</p>
+                    <p>For athletes and active adults, that means better alignment with training demands, reduced soreness in some cases, and a more sustainable recovery routine that fits around everything else.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section spectrum">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <p class="eyebrow eyebrow-accent">What it targets</p>
+                        <h2>Three ways light supports the body.</h2>
+                    </div>
+                    <p>Red and near-infrared wavelengths are used because they can reach deeper tissue and support the body’s natural recovery pathways.</p>
+                </div>
+
+                <div class="spectrum-grid">
+                    <article class="spectrum-card">
+                        <span class="num">01</span>
+                        <span class="wave">R</span>
+                        <span class="spectrum-title">Red light</span>
+                        <p class="body-copy">Often used for surface-level recovery, skin support, and encouraging an environment that is more conducive to repair.</p>
+                        <span class="tag">Cell support</span>
+                    </article>
+
+                    <article class="spectrum-card dark">
+                        <span class="num">02</span>
+                        <span class="wave">NIR</span>
+                        <span class="spectrum-title-sub">Near-infrared</span>
+                        <p class="body-copy">Penetrates deeper into tissue and is commonly paired with red light to support muscle recovery and cellular energy production.</p>
+                        <span class="tag">Deeper recovery</span>
+                    </article>
+
+                    <article class="spectrum-card ink">
+                        <span class="num">03</span>
+                        <span class="wave">ATP</span>
+                        <span class="spectrum-title-sub">Cellular energy</span>
+                        <p class="body-copy">By supporting mitochondrial activity, red light may help cells function more efficiently during repair, recovery, and readiness.</p>
+                        <span class="tag">Performance support</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section benefits-band">
+            <div class="container benefit-layout">
+                <div>
+                    <p class="eyebrow eyebrow-soft">Key benefits</p>
+                    <h2 class="lead-title">Why it has become a staple in modern recovery routines.</h2>
+                    <a href="https://wa.me/971585346954" class="btn btn-primary">Find the right setup</a>
+                </div>
+                <div class="benefit-list">
+                    <div class="benefit-item">
+                        <span>01</span>
+                        <div>
+                            <h3>Recovery support</h3>
+                            <p>Helps create a more favorable environment for muscular recovery and repair between hard efforts.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span>02</span>
+                        <div>
+                            <h3>Lower soreness</h3>
+                            <p>Some athletes use it to manage post-training soreness and support a faster return to training quality.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span>03</span>
+                        <div>
+                            <h3>Daily routine fit</h3>
+                            <p>It is easy to use in small sessions, making it practical for home setups and busy schedules.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container guide-grid">
+                <div class="guide-visual">
+                    <div class="quote">Your best performance is built in the recovery window.<strong>Light helps support that process.</strong></div>
+                </div>
+                <div class="guide-content">
+                    <p class="eyebrow eyebrow-accent">How to use it</p>
+                    <h2>Make the habit consistent.</h2>
+                    <p>Red light therapy works best when it fits naturally into a routine. Most people use it before or after training, or as part of a wind-down ritual in the evening.</p>
+                    <p>The key is to use it regularly rather than expecting a single session to create dramatic change. Better outcomes usually come from repetition, consistency, and a well-rounded recovery plan.</p>
+                    <ul class="check-list">
+                        <li>Use it around sessions or recovery windows for best routine fit.</li>
+                        <li>Build sessions around your actual schedule so they are easy to repeat.</li>
+                        <li>Pair it with sleep, hydration, and stress management for stronger results.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section safety">
+            <div class="container safety-grid">
+                <div class="safety-content">
+                    <p class="eyebrow eyebrow-accent">Important note</p>
+                    <h2>Use it intelligently.</h2>
+                    <p>Red light therapy is generally considered a low-risk recovery tool, but it is still smart to choose a quality device and follow the manufacturer guidance. The right dose and treatment area matter just as much as the wavelength.</p>
+                </div>
+                <div class="safety-points">
+                    <div class="safety-point">
+                        <span>01</span>
+                        <p>Choose a device with clear wavelength information and product quality standards.</p>
+                    </div>
+                    <div class="safety-point">
+                        <span>02</span>
+                        <p>Keep sessions consistent rather than chasing extreme or overly long durations.</p>
+                    </div>
+                    <div class="safety-point">
+                        <span>03</span>
+                        <p>Use it as part of a comprehensive plan that includes rest, movement, and good recovery habits.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <p class="eyebrow eyebrow-soft">Ready to explore</p>
+                <h2>
+                    <span class="cta-kicker">To repair</span>
+                    <span class="cta-word">Bring red light into your recovery stack.</span>
+                </h2>
+                <a href="https://wa.me/971585346954" class="btn btn-primary">Talk with Biohackn</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>Biohackn</h4>
+                <p>Recovery technology for people who want to feel better, recover smarter, and perform with intention.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="infraredSaunas.html">Infrared Saunas</a></p>
+                <p><a href="coldPlunges.html">Cold Plunges</a></p>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <p><a href="https://wa.me/971585346954">WhatsApp support</a></p>
+                <p><a href="mailto:hello@biohackn.com">hello@biohackn.com</a></p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            &copy; 2026 Biohackn. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

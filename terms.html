@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Biohackn Terms and Conditions. Read the terms that apply when you use our website and purchase our wellness products.">
+    <title>Terms and Conditions | Biohackn</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --terms-ink: #171512;
+            --terms-muted: #625b54;
+            --terms-paper: #f5f0e8;
+            --terms-panel: #ffffff;
+            --terms-line: #ddd2c5;
+            --terms-orange: #c65b2d;
+            --terms-deep: #171512;
+        }
+
+        .terms-page {
+            background: var(--terms-paper);
+            color: var(--terms-ink);
+            font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+            line-height: 1.7;
+        }
+
+        .terms-page a { color: var(--terms-orange); }
+        .terms-page .terms-nav {
+            align-items: center;
+            background: var(--terms-deep);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            min-height: 76px;
+            padding: 0 6vw;
+        }
+
+        .terms-brand { align-items: center; display: inline-flex; gap: 10px; text-decoration: none; }
+        .terms-brand img { border-radius: 50%; height: 38px; object-fit: cover; width: 38px; }
+        .terms-brand-name { background: linear-gradient(105deg, #ffffff 0%, #ffffff 48%, #f08a4b 100%); color: white; font-size: 26px; font-weight: 800; letter-spacing: -1.5px; line-height: 1; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .terms-nav-links { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+        .terms-nav-links a { color: rgba(255,255,255,.8); font-size: 13px; text-decoration: none; }
+        .terms-nav-links a:hover { color: #f08a4b; }
+
+        .terms-hero { background: linear-gradient(135deg, #171512, #33241d); color: white; padding: 86px 6vw 82px; }
+        .terms-hero-inner { margin: 0 auto; max-width: 1120px; }
+        .terms-kicker { color: #f08a4b; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+        .terms-hero h1 { font-size: clamp(44px, 7vw, 78px); letter-spacing: -3px; line-height: 1; margin: 18px 0 22px; }
+        .terms-hero p { color: rgba(255,255,255,.78); font-size: 17px; margin: 0; max-width: 600px; }
+
+        .terms-layout { display: grid; gap: 68px; grid-template-columns: 220px minmax(0, 720px); margin: 0 auto; max-width: 1120px; padding: 70px 6vw 100px; }
+        .terms-toc { align-self: start; position: sticky; top: 24px; }
+        .terms-toc-title { color: var(--terms-ink); font-size: 11px; font-weight: 800; letter-spacing: 1.5px; margin: 0 0 14px; text-transform: uppercase; }
+        .terms-toc ol { border-left: 1px solid var(--terms-line); list-style: none; margin: 0; padding: 0 0 0 17px; }
+        .terms-toc li { margin: 10px 0; }
+        .terms-toc a { color: var(--terms-muted); font-size: 13px; line-height: 1.35; text-decoration: none; }
+        .terms-toc a:hover { color: var(--terms-orange); }
+
+        .terms-document { background: var(--terms-panel); border: 1px solid var(--terms-line); padding: clamp(28px, 5vw, 58px); }
+        .terms-meta { border-bottom: 1px solid var(--terms-line); color: var(--terms-muted); font-size: 13px; margin-bottom: 34px; padding-bottom: 24px; }
+        .terms-document h2 { color: var(--terms-ink); font-size: 25px; letter-spacing: -.4px; line-height: 1.2; margin: 42px 0 14px; }
+        .terms-document h2:first-of-type { margin-top: 0; }
+        .terms-document p { color: var(--terms-muted); font-size: 15px; margin: 0 0 16px; }
+        .terms-document ul { color: var(--terms-muted); font-size: 15px; margin: 0 0 18px; padding-left: 22px; }
+        .terms-document li { margin: 8px 0; padding-left: 4px; }
+        .terms-contact { background: #fff0e5; border-left: 3px solid var(--terms-orange); margin-top: 24px; padding: 19px 22px; }
+        .terms-contact p { margin: 0; }
+
+        .terms-footer { background: #171512; color: rgba(255,255,255,.7); padding: 32px 6vw; }
+        .terms-footer-inner { align-items: center; display: flex; justify-content: space-between; margin: 0 auto; max-width: 1120px; }
+        .terms-footer p { font-size: 12px; margin: 0; }
+        .terms-footer a { color: #f08a4b; font-size: 12px; text-decoration: none; }
+
+        @media (max-width: 760px) {
+            .terms-page .terms-nav { min-height: 68px; }
+            .terms-nav-links { gap: 14px; }
+            .terms-nav-links li:nth-child(2) { display: none; }
+            .terms-hero { padding: 62px 7vw 58px; }
+            .terms-hero h1 { letter-spacing: -2px; }
+            .terms-layout { display: block; padding: 38px 5vw 64px; }
+            .terms-toc { margin-bottom: 30px; position: static; }
+            .terms-toc ol { display: grid; gap: 4px 20px; grid-template-columns: repeat(2, 1fr); }
+            .terms-document { padding: 27px 22px; }
+            .terms-footer-inner { align-items: flex-start; flex-direction: column; gap: 12px; }
+        }
+    </style>
+</head>
+<body class="terms-page">
+    <a class="skip-link" href="#terms-content">Skip to terms and conditions</a>
+    <nav class="terms-nav" aria-label="Primary navigation">
+        <a class="terms-brand" href="index.html"><img src="Gideon.jpg" alt="Biohackn logo"><span class="terms-brand-name">Biohackn</span></a>
+        <ul class="terms-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products">Wellness solutions</a></li>
+            <li><a href="https://wa.me/971547119996">Speak with an expert</a></li>
+        </ul>
+    </nav>
+
+    <header class="terms-hero">
+        <div class="terms-hero-inner">
+            <div class="terms-kicker">Clear expectations</div>
+            <h1>Terms and Conditions</h1>
+            <p>The terms that apply when you visit Biohackn, use our Services, or purchase our wellness products.</p>
+        </div>
+    </header>
+
+    <main class="terms-layout" id="terms-content">
+        <aside class="terms-toc" aria-label="Terms and conditions sections">
+            <p class="terms-toc-title">On this page</p>
+            <ol>
+                <li><a href="#agreement">Agreement to terms</a></li>
+                <li><a href="#eligibility">Eligibility and use</a></li>
+                <li><a href="#products">Products and orders</a></li>
+                <li><a href="#payments">Prices and payment</a></li>
+                <li><a href="#intellectual">Intellectual property</a></li>
+                <li><a href="#liability">Disclaimers and liability</a></li>
+                <li><a href="#law">Governing law</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ol>
+        </aside>
+
+        <article class="terms-document">
+            <div class="terms-meta"><strong>Last updated:</strong> September 11, 2026</div>
+
+            <h2 id="agreement">1. Agreement to these terms</h2>
+            <p>This website is operated by Biohackn. Throughout the site, the terms “we,” “us,” and “our” refer to Biohackn. These Terms and Conditions govern your access to and use of our website, products, services, and related content (collectively, the “Services”).</p>
+            <p>By visiting our website, creating an account, communicating with us, or placing an order, you agree to be bound by these Terms and Conditions and any policies linked from them. If you do not agree, please do not use the Services.</p>
+
+            <h2 id="eligibility">2. Eligibility and acceptable use</h2>
+            <p>You must be at least the age of majority in your place of residence to make a purchase or use the Services without supervision. By using the Services, you confirm that you meet this requirement or have the consent of a parent or legal guardian.</p>
+            <p>You agree to use the Services only for lawful purposes. You must not:</p>
+            <ul>
+                <li>Use the Services to violate any applicable law or regulation.</li>
+                <li>Attempt to gain unauthorized access to the website, accounts, systems, or data.</li>
+                <li>Upload malicious code, interfere with the operation of the Services, or compromise another person’s security.</li>
+                <li>Copy, reproduce, resell, or exploit any part of the Services without our written permission.</li>
+                <li>Submit false, misleading, abusive, defamatory, or infringing content.</li>
+            </ul>
+
+            <h2 id="products">3. Products, wellness information, and orders</h2>
+            <p>We aim to describe and display our products as accurately as possible. However, colors may appear differently on different screens, and product images or specifications may change without notice. Product availability is not guaranteed until your order has been accepted.</p>
+            <p>Our products and website content are provided for general wellness and informational purposes. They are not medical advice, diagnosis, or treatment. Consult a qualified healthcare professional before using wellness equipment or changing your health routine, especially if you have a medical condition, are pregnant, or take medication.</p>
+            <p>Submitting an order is an offer to purchase. We may accept, decline, limit, or cancel an order for reasons including product availability, pricing or description errors, suspected fraud, or suspected resale activity. If we cancel an order after payment, we will arrange a refund through the original payment method where possible.</p>
+
+            <h2 id="payments">4. Prices, payment, delivery, and returns</h2>
+            <p>Prices, promotions, delivery charges, and availability may change at any time. Prices are displayed in the currency shown on the website and do not include charges that may be imposed by your bank, payment provider, or applicable authority.</p>
+            <p>You agree to provide current and complete billing, delivery, and contact information. Payment must be authorized before an order is dispatched. Delivery estimates are provided in good faith and may be affected by product availability, logistics, weather, customs, or events outside our control.</p>
+            <p>Returns, exchanges, cancellations, and refunds are subject to our applicable store policies and any product-specific conditions communicated before purchase. For information about how we handle personal information, see our <a href="privacypolicy.html">Privacy Policy</a>. Nothing in these Terms limits rights you may have under mandatory consumer protection law.</p>
+
+            <h2 id="intellectual">5. Intellectual property</h2>
+            <p>All content made available through the Services, including text, logos, graphics, photographs, product descriptions, layout, and design, belongs to Biohackn or its licensors and is protected by applicable intellectual property laws.</p>
+            <p>We grant you a limited, non-exclusive, non-transferable permission to access and use the Services for personal, non-commercial purposes. No rights are transferred to you except as expressly stated in these Terms.</p>
+
+            <h2>6. Third-party services and links</h2>
+            <p>The Services may include links to third-party websites, payment services, social platforms, or other tools. These third parties operate under their own terms and privacy policies. We are not responsible for their content, availability, security, or practices, and a link does not imply endorsement.</p>
+
+            <h2 id="liability">7. Disclaimers and limitation of liability</h2>
+            <p>We work to keep the Services accurate, secure, and available, but we do not guarantee that they will always be uninterrupted, error-free, or free of harmful components. The Services and products are provided to the maximum extent permitted by law on an “as available” basis.</p>
+            <p>To the maximum extent permitted by applicable law, Biohackn and its officers, employees, contractors, suppliers, and service providers will not be liable for indirect, incidental, special, punitive, or consequential loss arising from your use of the Services or products. Nothing in these Terms excludes liability that cannot lawfully be excluded or limited.</p>
+
+            <h2>8. Indemnification and termination</h2>
+            <p>You agree to indemnify and hold Biohackn harmless from claims, losses, liabilities, and reasonable costs arising from your breach of these Terms, your misuse of the Services, or your violation of another person’s rights or applicable law.</p>
+            <p>We may suspend or terminate access to the Services if we reasonably believe you have breached these Terms, engaged in fraud or abuse, or created a risk for Biohackn or others. Provisions that by their nature should survive termination will continue to apply.</p>
+
+            <h2 id="law">9. Governing law and changes</h2>
+            <p>These Terms and any separate agreement under which we provide Services are governed by the laws of Dubai and the United Arab Emirates, without prejudice to any mandatory rights available to consumers in their place of residence.</p>
+            <p>We may update these Terms by posting a revised version on this page. The “Last updated” date identifies the latest revision. Your continued use of the Services after changes are posted means you accept the revised Terms.</p>
+
+            <h2 id="contact">10. Contact us</h2>
+            <p>Questions about these Terms and Conditions should be sent to Biohackn:</p>
+            <div class="terms-contact">
+                <p><strong>Email:</strong> <a href="mailto:contact@biohackn.com">contact@biohackn.com</a><br>
+                <strong>Phone:</strong> <a href="tel:+971547119996">+971 54 711 9996</a><br>
+                <strong>Location:</strong> Dubai, United Arab Emirates</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="terms-footer">
+        <div class="terms-footer-inner">
+            <p>&copy; 2026 Biohackn. Built for a healthier, more resilient life.</p>
+            <a href="index.html">Back to Biohackn</a>
+        </div>
+    </footer>
+</body>
+</html>
