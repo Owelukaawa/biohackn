@@ -687,7 +687,7 @@ section h2::after {
 /* Testimonials Section */
 .testimonials {
     position: relative;
-    background: /*linear-gradient(135deg, #201712 0%, #382119 58%, #63321f 100%)*/ white;
+    background: linear-gradient(135deg, #201712 0%, #382119 58%, #63321f 100%);
     padding: 100px 0 110px;
     overflow: hidden;
 }
